@@ -148,7 +148,7 @@ namespace CSPharma_v4_DAL.Models
     [Table("Tdc_tch_estado_pedidos", Schema = "dwh_torrecontrol")]
     public class Estado_pedidos
     {
-        [Key]
+        [Required]
         [Column("Md_uuid")]
         [Display(Name = "Md_uuid")]
         public string Md_uuid { get; set; }
@@ -158,7 +158,7 @@ namespace CSPharma_v4_DAL.Models
         [Display(Name = "Md_date")]
         public DateTime Md_date { get; set; }
 
-        // [Required]
+        [Key]
         [Column("Id")]
         [Display(Name = "Id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -223,7 +223,7 @@ namespace CSPharma_v4_DAL.Models
     [Table("Tdc_cat_lineas_distribucion", Schema = "dwh_torrecontrol")]
     public class Lineas_distribucion
     {
-        [Key]
+        [Required]
         [Column("Md_uuid")]
         [Display(Name = "Md_uuid")]
         public string Md_uuid { get; set; }
@@ -239,7 +239,7 @@ namespace CSPharma_v4_DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        [Key]
         [Column("Cod_linea")]
         [Display(Name = "Cod_linea")]
         public string Cod_linea { get; set; }
@@ -284,7 +284,7 @@ namespace CSPharma_v4_DAL.Models
     [Table("Tdc_cat_estados_envio_pedido", Schema = "dwh_torrecontrol")]
     public class Estados_envio_pedido
     {
-        [Key]
+        [Required]
         [Column("Md_uuid")]
         [Display(Name = "Md_uuid")]
         public string Md_uuid { get; set; }
@@ -300,7 +300,7 @@ namespace CSPharma_v4_DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        [Key]
         [Column("Cod_estado_envio")]
         [Display(Name = "Cod_estado_envio")]
         public string Cod_estado_envio { get; set; }
@@ -335,7 +335,7 @@ namespace CSPharma_v4_DAL.Models
     [Table("Tdc_cat_estados_pago_pedido", Schema = "dwh_torrecontrol")]
     public class Estados_pago_pedido
     {
-        [Key]
+        [Required]
         [Column("Md_uuid")]
         [Display(Name = "Md_uuid")]
         public string Md_uuid { get; set; }
@@ -351,7 +351,7 @@ namespace CSPharma_v4_DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        [Key]
         [Column("Cod_estado_pago")]
         [Display(Name = "Cod_estado_pago")]
         public string Cod_estado_pago { get; set; }
@@ -386,7 +386,7 @@ namespace CSPharma_v4_DAL.Models
     [Table("Tdc_cat_estados_devolucion_pedido", Schema = "dwh_torrecontrol")]
     public class Estados_devolucion_pedido
     {
-        [Key]
+        [Required]
         [Column("Md_uuid")]
         [Display(Name = "Md_uuid")]
         public string Md_uuid { get; set; }
@@ -402,7 +402,7 @@ namespace CSPharma_v4_DAL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        [Key]
         [Column("Cod_estado_devolucion")]
         [Display(Name = "Cod_estado_devolucion")]
         public string Cod_estado_devolucion { get; set; }
